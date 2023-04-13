@@ -5,7 +5,6 @@ from fastapi import FastAPI
 # app donde se realizarán las consultas.
 app = FastAPI(title = "MLOPS - Streaming")
 
-#plataformas_df = pd.read_csv(r'../datasets/Streaming.csv')
 plataformas_df = pd.read_csv(r'streaming.csv')
 
 # Uso de app
