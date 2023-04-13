@@ -7,7 +7,7 @@ app = FastAPI(title = "MLOPS - Streaming")
 
 plataformas_df = pd.read_csv(r'streaming.csv')
 
-# Uso de app
+# Uso de la Api
 @app.get('/')
 def index():
     return 'Panel de consultas streaming Amazon, Disney , Hulu y Netflix'
