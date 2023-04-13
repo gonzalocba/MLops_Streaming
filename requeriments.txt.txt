@@ -1,0 +1,7 @@
+#Requerimientos para funcionamiento de la API
+fastapi
+pandas
+uvicorn
+
+
+
