@@ -190,10 +190,6 @@ def get_contents(rating):
 @app.get('/get_recomendation/{titulo}')
 def get_recommendations(titulo, k=5):
     # Obtener el índice numérico de un título específico
-    # Cargar el modelo guardado previamente
-    with open('reduced_similarity_matrix.pickle', 'rb') as f:
-        reduced_similarity_matrix = pickle.load(f)
-    df = pd.read_csv('streaming_1_ML.csv')
     title_index = df.loc[df['title'] == titulo].index[0]
     # Verificar que el índice sea menor que el número de filas de la matriz
     if title_index < reduced_similarity_matrix.shape[0]:
@@ -205,10 +201,12 @@ def get_recommendations(titulo, k=5):
         top_k = most_similar[1:k+1]
         # Obtener los títulos de los ítems más similares al ítem de entrada
         # Crear un diccionario con los títulos de los ítems más similares al ítem de entrada
-        top_k_titles = {df.loc[i, 'title'] for i in top_k}
-        print(type(top_k_titles))
+        #top_k_titles = {df.loc[i, 'title'] for i in top_k}
+        top_k_titles = tuple(df.loc[i, 'title'] for i in top_k)
+        top_k_titles_dict = dict(enumerate(top_k_titles, 1))
+        #print(type(top_k_titles_dict))
         # Devolver los títulos de los ítems más similares al ítem de entrada en forma de diccionario
-        return top_k_titles
+        return top_k_titles_dict
     else:
         # Devolver una lista vacía si el índice es mayor que el número de filas de la matriz
         return []
