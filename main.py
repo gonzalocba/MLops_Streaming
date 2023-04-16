@@ -180,17 +180,22 @@ def prod_per_county(tipo, pais, anio):
 def get_contents(rating):
     # Cargar los datos desde el archivo CSV
     # Filtrar los contenidos por rating de audiencia
-    df_rating = plataformas_df.loc[plataformas_df['rating'] == rating]
-
-    # Devolver el número total de contenidos con el rating de audiencia dado
-    #return len(df_rating)    
-    return {'cantidad': df_rating}
-
+    df_filtered = plataformas_df.loc[plataformas_df['rating'] == rating]
+    # Devolver el número total de contenidos con el rating de audiencia dado como un entero
+    #return {'cantidad': df_rating}
+    return int(len(df_filtered))   
+    
 #modelo de recomendacion pelicula
 @app.get('/get_recomendation/{titulo}')
 def get_recommendations(titulo, k=5):
     # Obtener el índice numérico de un título específico
+        # Cargar el modelo guardado previamente
+    f = open('reduced_similarity_matrix.pickle', 'rb')
+    reduced_similarity_matrix = pickle.load(f)
+    f.close()
+    df = pd.read_csv('streaming_1_ML.csv')
     title_index = df.loc[df['title'] == titulo].index[0]
+        
     # Verificar que el índice sea menor que el número de filas de la matriz
     if title_index < reduced_similarity_matrix.shape[0]:
         # Obtener las similitudes entre el ítem y los demás ítems
