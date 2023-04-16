@@ -204,9 +204,11 @@ def get_recommendations(titulo, k=5):
         # Obtener los k ítems más similares al ítem de entrada
         top_k = most_similar[1:k+1]
         # Obtener los títulos de los ítems más similares al ítem de entrada
-        top_k_titles = [df.loc[i, 'title'] for i in top_k]
-        # Devolver los títulos de los ítems más similares al ítem de entrada
-        return {'recomendacion': top_k_titles} 
+        # Crear un diccionario con los títulos de los ítems más similares al ítem de entrada
+        top_k_titles = {df.loc[i, 'title'] for i in top_k}
+        print(type(top_k_titles))
+        # Devolver los títulos de los ítems más similares al ítem de entrada en forma de diccionario
+        return top_k_titles
     else:
         # Devolver una lista vacía si el índice es mayor que el número de filas de la matriz
         return []
