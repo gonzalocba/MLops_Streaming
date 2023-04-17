@@ -51,7 +51,7 @@ Se utilizo libreria de python FastApi para la creación y el alojamiento de apli
 Se realizo deployment mediante Render que permite el despliegue de la aplicación para evaluar su funcionamiento en un entorno web
 
 <hr> 
-Uso API
+#### Uso API
 Como funcionan las consultas
 En el despliegue (entorno web) se cuenta con 7 bloques donde se ingresaran variables para ser procesadas arrojando un resultado segun el objetivo de cada una de las funciones supra
 
