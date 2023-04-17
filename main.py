@@ -187,7 +187,7 @@ def get_contents(rating: int):
     
 #modelo de recomendacion pelicula
 @app.get('/get_recomendation/{titulo}')
-def get_recommendations(titulo: dict, k=5):
+def get_recommendations(titulo, k=5):
     # Obtener el índice numérico de un título específico
         # Cargar el modelo guardado previamente
     f = open('reduced_similarity_matrix.sav', 'rb')
