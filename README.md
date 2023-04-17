@@ -1,4 +1,4 @@
-<p align=center><img src=https://assets.soyhenry.com/logos/LOGO-HENRY-04.png><p>
+<p align=center><img src=https://assets.soyhenry.com/logoOG.png><p>
 
 # PROYECTO INDIVIDUAL PI MLops 
 
