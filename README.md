@@ -60,8 +60,9 @@ Mediante la siguiente URL se accede al entorno web
 https://
 
 <hr> 
-#### Video explicativo 
+#### Video explicativo
 En el presente video se realiza una explicacion de los pasos realizados como propuesta de solucion a la problematica planteada
+https://
 
 <hr> 
 #### Tecnologias utilizadas
