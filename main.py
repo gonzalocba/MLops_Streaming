@@ -186,14 +186,15 @@ def get_contents(rating):
     return int(len(df_filtered))   
     
 #modelo de recomendacion pelicula
-@app.get('/get_recomendation/{titulo}/{k}')
-def get_recommendations(titulo, k=5):  
+@app.get('/get_recomendation/{titulo}')
+def get_recommendations(titulo):  
     # Cargar el modelo guardado previamente
     f = open('reduced_similarity_matrix.sav', 'rb')
     reduced_similarity_matrix = pickle.load(f)
     f.close()
     #cargar df
     df = pd.read_csv('streaming_1_ML.csv')
+    k=5
     title_index = df.loc[df['title'] == titulo].index[0]    
     # Verificar que el índice sea menor que el número de filas de la matriz
     if title_index < reduced_similarity_matrix.shape[0]:
