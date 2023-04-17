@@ -125,7 +125,7 @@ def get_count_platform(platform):
 
 #Consulta N°4: Actor que más se repite según la plataforma y el año de la producción cinematográfica.
 @app.get('/get_actor/{platform}/{year}')
-def get_actor(platform, year: int):
+def get_actor(platform: str, year: int):
     ga_p = plataformas_df
     
     #se aplica filtro y valores columna cast se realiza value_counts() que devuelve una serie que contiene recuentos de valores únicos.
@@ -177,7 +177,7 @@ def prod_per_county(tipo, pais, anio):
 
 #consulta nº6: La cantidad total de contenidos/productos (todo lo disponible en streaming, series, documentales, peliculas, etc) según el rating de audiencia dado
 @app.get('/get_contents/{rating}')
-def get_contents(rating: int):
+def get_contents(rating: str):
     # Cargar los datos desde el archivo CSV
     # Filtrar los contenidos por rating de audiencia
     df_filtered = plataformas_df.loc[plataformas_df['rating'] == rating]
@@ -187,7 +187,7 @@ def get_contents(rating: int):
     
 #modelo de recomendacion pelicula
 @app.get('/get_recomendation/{titulo}')
-def get_recommendations(titulo, k=5):
+def get_recommendations(titulo: str, k=5):
     # Obtener el índice numérico de un título específico
         # Cargar el modelo guardado previamente
     f = open('reduced_similarity_matrix.sav', 'rb')
