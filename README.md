@@ -44,3 +44,38 @@ Se realizaron 6 consultas sobre el dataset resultante de la combinacion de los p
 4. Actor que más se repite según plataforma y año
 5. La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año
 6. La cantidad total de contenidos/productos (todo lo disponible en streaming, series, documentales, peliculas, etc) según el rating de audiencia dado (para que publico fue clasificada la pelicula). 
+
+`PASO 4`
+#### Proceso creacion API y DEPLOYMENT
+Se utilizo libreria de python FastApi para la creación y el alojamiento de aplicacion (API) para ejecutar las funciones citadas supra en un entorno web 
+Se realizo deployment mediante Render que permite el despliegue de la aplicación para evaluar su funcionamiento en un entorno web
+
+<hr> 
+Uso API
+Como funcionan las consultas
+En el despliegue (entorno web) se cuenta con 7 bloques donde se ingresaran variables para ser procesadas arrojando un resultado segun el objetivo de cada una de las funciones supra
+
+Mediante la siguiente URL se accede al entorno web
+https://qlprmb.deta.dev
+
+<hr> 
+#### Video explicativo 
+En el presente video se realiza una explicacion de los pasos realizados como propuesta de solucion a la problematica planteada
+
+<hr> 
+#### Tecnologias utilizadas
+
+Lenguaje Python
+Librerias scikit-learn machine learning
+Numpy
+Pandas
+FastApi
+Uvicornio
+
+
+<img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1280px-NumPy_logo_2020.svg.png">
+<img src="https://www.kindpng.com/picc/m/574-5747046_python-pandas-logo-transparent-hd-png-download.png">
+<img src="https://repository-images.githubusercontent.com/260928305/92388600-8d1c-11ea-9993-a726466b5099">
+<img src="https://raw.githubusercontent.com/tomchristie/uvicorn/master/docs/uvicorn.png">
