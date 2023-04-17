@@ -38,9 +38,9 @@ el análisis de datos y el machine learning (ML) para despues combinarlos en 1 s
 Desarrollo de las consultas solicitadas:
 Se realizaron 6 consultas sobre el dataset resultante de la combinacion de los provistos en primera instancia
 
-1 Película (sólo película, no serie, ni documentales, etc) con mayor duración según año, plataforma y tipo de duración
-2 Cantidad de películas (sólo películas, no series, ni documentales, etc) según plataforma, con un puntaje mayor a XX en determinado año
-3 Cantidad de películas (sólo películas, no series, ni documentales, etc) según plataforma
-4 Actor que más se repite según plataforma y año
-5 La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año
-6 La cantidad total de contenidos/productos (todo lo disponible en streaming, series, documentales, peliculas, etc) según el rating de audiencia dado (para que publico fue clasificada la pelicula). 
+1. Película (sólo película, no serie, ni documentales, etc) con mayor duración según año, plataforma y tipo de duración
+2. Cantidad de películas (sólo películas, no series, ni documentales, etc) según plataforma, con un puntaje mayor a XX en determinado año
+3. Cantidad de películas (sólo películas, no series, ni documentales, etc) según plataforma
+4. Actor que más se repite según plataforma y año
+5. La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año
+6. La cantidad total de contenidos/productos (todo lo disponible en streaming, series, documentales, peliculas, etc) según el rating de audiencia dado (para que publico fue clasificada la pelicula). 
