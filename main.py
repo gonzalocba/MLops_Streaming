@@ -125,38 +125,31 @@ def get_count_platform(platform):
 
 #Consulta N°4: Actor que más se repite según la plataforma y el año de la producción cinematográfica.
 @app.get('/get_actor/{platform}/{year}')
-def get_actor(platform, year):
+def get_actor(platform: str, year: int):
     ga_p = plataformas_df
     
     #se aplica filtro y valores columna cast se realiza value_counts() que devuelve una serie que contiene recuentos de valores únicos.
-    if platform.lower() == 'amazon':
-        ga_pc= ga_p[(ga_p['release_year'] == year) & (ga_p['id'].apply(lambda x: 'a' in x))]
-        ga_pca= ga_pc['cast'].value_counts().idxmax()
+    if platform.casefold() == 'amazon':
+        ga_pc = ga_p[(ga_p['release_year'] == year) & (ga_p['id'].apply(lambda x: 'a' in x))]
+        ga_pca = ga_pc['cast'].value_counts().idxmax()
 
-    elif platform.lower() == 'disney':
+    elif platform.casefold() == 'disney':
         ga_pc = ga_p[(ga_p['release_year'] == year) & (ga_p['id'].apply(lambda x: 'd' in x))]
-        ga_pca= ga_pc['cast'].value_counts().idxmax()
+        ga_pca = ga_pc['cast'].value_counts().idxmax()
     
-    elif platform.lower() == 'hulu':
+    elif platform.casefold() == 'hulu':
         ga_pc = ga_p[(ga_p['release_year'] == year) & (ga_p['id'].apply(lambda x: 'h' in x))]
-        ga_pca= ga_pc['cast'].value_counts().idxmax()
+        ga_pca = ga_pc['cast'].value_counts().idxmax()
 
-    elif platform.lower() == 'netflix':
+    elif platform.casefold() == 'netflix':
         ga_pc = ga_p[(ga_p['release_year'] == year) & (ga_p['id'].apply(lambda x: 'n' in x))]
-        ga_pca= ga_pc['cast'].value_counts().idxmax()
-        ga_apa = ga_apa['cast'].value_counts()
-    # Retorno si se ingresa un valor plataforma diferente a verificar
+        ga_pca = ga_pc['cast'].value_counts().idxmax()
+
     else:
-        print('No se encuentra la plataforma , por favor ingrese: Amazon, Disney, Hulu y Netflix')
-        return None
+        raise ValueError('La plataforma no es válida. Por favor ingrese: Amazon, Disney, Hulu o Netflix.')
     
-    # Por último, imprime un mensaje donde contiene los resultados de la consulta.
-    #return f' El actor/actriz que más se repite en la plataforma {platform} durante el año {year} es: {ga_pca}' 
-    return {
-        'plataforma': platform,
-        'anio': year,
-        'actor': ga_pca
-    }
+    return {'plataforma': platform, 'anio': year, 'actor': ga_pca}
+
     
 #Consulta nº 5: La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año.
 @app.get('/prod_per_county/{tipo}/{pais}/{anio}')
