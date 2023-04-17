@@ -77,11 +77,11 @@ Uvicornio
 <br>
 
 <div>
-  <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" style="width: 140px; height: 100px; display: inline-block;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" style="width: 140px; height: 100px; display: inline-block;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1280px-NumPy_logo_2020.svg.png" style="width: 140px; height: 100px; display: inline-block;">
-  <img src="https://www.kindpng.com/picc/m/574-5747046_python-pandas-logo-transparent-hd-png-download.png" style="width: 140px; height: 100px; display: inline-block;">
-  <img src="https://repository-images.githubusercontent.com/260928305/92388600-8d1c-11ea-9993-a726466b5099" style="width: 140px; height: 100px; display: inline-block;">
-  <img src="https://raw.githubusercontent.com/tomchristie/uvicorn/master/docs/uvicorn.png" style="width: 140px; height: 100px; display: inline-block;">
+  <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" style="width: 135px; height: 100px; display: inline-block;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png" style="width: 135px; height: 100px; display: inline-block;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1280px-NumPy_logo_2020.svg.png" style="width: 135px; height: 100px; display: inline-block;">
+  <img src="https://www.kindpng.com/picc/m/574-5747046_python-pandas-logo-transparent-hd-png-download.png" style="width: 135px; height: 100px; display: inline-block;">
+  <img src="https://repository-images.githubusercontent.com/260928305/92388600-8d1c-11ea-9993-a726466b5099" style="width: 135px; height: 100px; display: inline-block;">
+  <img src="https://raw.githubusercontent.com/tomchristie/uvicorn/master/docs/uvicorn.png" style="width: 135px; height: 100px; display: inline-block;">
 </div>
 
