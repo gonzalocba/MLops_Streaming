@@ -155,8 +155,7 @@ def get_actor(platform, year):
     return {
         'plataforma': platform,
         'anio': year,
-        'actor': ga_pca,
-        'apariciones': ga_apa
+        'actor': ga_pca
     }
     
 #Consulta nº 5: La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año.
