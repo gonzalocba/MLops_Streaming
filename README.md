@@ -53,10 +53,11 @@ Se realizo deployment mediante Render que permite el despliegue de la aplicació
 <hr> 
 #### Uso API
 Como funcionan las consultas
+
 En el despliegue (entorno web) se cuenta con 7 bloques donde se ingresaran variables para ser procesadas arrojando un resultado segun el objetivo de cada una de las funciones supra
 
 Mediante la siguiente URL se accede al entorno web
-https://qlprmb.deta.dev
+https://
 
 <hr> 
 #### Video explicativo 
