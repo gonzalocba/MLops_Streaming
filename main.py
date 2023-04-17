@@ -125,7 +125,7 @@ def get_count_platform(platform):
 
 #Consulta N°4: Actor que más se repite según la plataforma y el año de la producción cinematográfica.
 @app.get('/get_actor/{platform}/{year}')
-def get_actor(platform: str, year: int):
+def get_actor(platform, year):
     ga_p = plataformas_df
     
     #se aplica filtro y valores columna cast se realiza value_counts() que devuelve una serie que contiene recuentos de valores únicos.
