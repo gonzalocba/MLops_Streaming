@@ -177,7 +177,7 @@ def prod_per_county(tipo, pais, anio):
 
 #consulta nº6: La cantidad total de contenidos/productos (todo lo disponible en streaming, series, documentales, peliculas, etc) según el rating de audiencia dado
 @app.get('/get_contents/{rating}')
-def get_contents(rating: str):
+def get_contents(rating):
     # Cargar los datos desde el archivo CSV
     # Filtrar los contenidos por rating de audiencia
     df_filtered = plataformas_df.loc[plataformas_df['rating'] == rating]
@@ -186,16 +186,15 @@ def get_contents(rating: str):
     return int(len(df_filtered))   
     
 #modelo de recomendacion pelicula
-@app.get('/get_recomendation/{titulo}')
-def get_recommendations(titulo: str, k=5):
-    # Obtener el índice numérico de un título específico
-        # Cargar el modelo guardado previamente
+@app.get('/get_recomendation/{titulo}/{k}')
+def get_recommendations(titulo, k=5):  
+    # Cargar el modelo guardado previamente
     f = open('reduced_similarity_matrix.sav', 'rb')
     reduced_similarity_matrix = pickle.load(f)
     f.close()
+    #cargar df
     df = pd.read_csv('streaming_1_ML.csv')
-    title_index = df.loc[df['title'] == titulo].index[0]
-        
+    title_index = df.loc[df['title'] == titulo].index[0]    
     # Verificar que el índice sea menor que el número de filas de la matriz
     if title_index < reduced_similarity_matrix.shape[0]:
         # Obtener las similitudes entre el ítem y los demás ítems
@@ -206,12 +205,11 @@ def get_recommendations(titulo: str, k=5):
         top_k = most_similar[1:k+1]
         # Obtener los títulos de los ítems más similares al ítem de entrada
         # Crear un diccionario con los títulos de los ítems más similares al ítem de entrada
-        #top_k_titles = {df.loc[i, 'title'] for i in top_k}
         top_k_titles = tuple(df.loc[i, 'title'] for i in top_k)
         top_k_titles_dict = dict(enumerate(top_k_titles, 1))
         #print(type(top_k_titles_dict))
         # Devolver los títulos de los ítems más similares al ítem de entrada en forma de diccionario
-        print(type(top_k_titles_dict))
+    
         return top_k_titles_dict
     else:
         # Devolver una lista vacía si el índice es mayor que el número de filas de la matriz
