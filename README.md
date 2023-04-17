@@ -21,6 +21,8 @@ Este proceso se realiza para obtener una vista general del conjunto de datos, ve
 parámetros como valores nulos, outliers y visualizaciones de los datos para una comprensión mas rápida y efectiva 
 
 `PASO 2`
+#### Proceso Extracción, transformación y carga (ETL)
+
 #### EXTRACCIÓN DE DATOS
 Se trabajo con 4 datasets de empresas de streaming (Amazon prime, disney plus, hulu, netflix)
 con datos referidos a contenido , titulos , genero espacio temporal entre otros 
