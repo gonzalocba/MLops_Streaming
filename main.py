@@ -154,13 +154,16 @@ def get_actor(platform: str, year: int):
 #Consulta nº 5: La cantidad de contenidos/productos (todo lo disponible en streaming) que se publicó por país y año.
 @app.get('/prod_per_county/{tipo}/{pais}/{anio}')
 def prod_per_county(tipo, pais, anio):
-    # Seleccionar solo las columnas necesarias para la función
-    df = plataformas_df[['type', 'country', 'release_year']]
+    # Verificar si el valor del parámetro "tipo" existe en el DataFrame
+    if tipo not in plataformas_df['type'].values:
+        return 'El valor del parámetro' +tipo+ 'no existe en el DataFrame'
     
-    # Aplicar la función lambda para filtrar por tipo, país y año
-    df_filtrado = df[df.apply(lambda x: (x['type'] == tipo) and (x['country'] == pais) and (x['release_year'] == anio), axis=1)]
+    # Filtrar el DataFrame por tipo, país y año
+    df_filtrado = plataformas_df[(plataformas_df['type'] == tipo) & 
+                                 (plataformas_df['country'] == pais) & 
+                                 (plataformas_df['release_year'] == anio)]
     
-    # Contar la cantidad de películas del tipo especificado
+    # Obtener la cantidad de películas del tipo especificado
     cantidad_tipo_pelicula = len(df_filtrado)
     
     # Salida
@@ -175,7 +178,8 @@ def get_contents(rating):
     df_filtered = plataformas_df.loc[plataformas_df['rating'] == rating]
     # Devolver el número total de contenidos con el rating de audiencia dado como un entero
     #return {'cantidad': df_rating}
-    return int(len(df_filtered))   
+    cantidad = int(len(df_filtered))
+    return {'plataforma': cantidad}   
     
 #modelo de recomendacion pelicula
 @app.get('/get_recomendation/{titulo}')
