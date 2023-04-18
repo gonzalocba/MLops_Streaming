@@ -65,7 +65,7 @@ Mediante la siguiente URL se accede al entorno web
 <hr> 
 #### Video explicativo
 En el presente video se realiza una explicacion de los pasos realizados como propuesta de solucion a la problematica planteada
-https://
+https://bit.ly/ProyectoView
 
 <hr> 
 #### Tecnologias utilizadas
