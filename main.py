@@ -207,7 +207,8 @@ def get_recommendations(titulo):
         #print(type(top_k_titles_dict))
         # Devolver los títulos de los ítems más similares al ítem de entrada en forma de diccionario
     
-        return top_k_titles_dict
+        #return top_k_titles_dict
+        return {'recomendacion':top_k_titles_dict}
     else:
         # Devolver una lista vacía si el índice es mayor que el número de filas de la matriz
         return []
