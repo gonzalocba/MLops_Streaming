@@ -6,7 +6,7 @@
 Crear Modelo ML en base a procesos de Data Engineer y tecnicas de ML que soluciona problema de negocio de crear un sistema de recomendación para contenido de servicios de streaming
 
 Acceso esquema proyecto
-https://bit.ly/ProyectoMLops
+<href target=blank>https://bit.ly/ProyectoMLops</href>
 
 #### Problemática:
 El ciclo de vida de un proyecto de Machine Learning parte desde el tratamiento de datos denominado ETL 
