@@ -6,7 +6,7 @@
 Crear Modelo ML en base a procesos de Data Engineer y tecnicas de ML que soluciona problema de negocio de crear un sistema de recomendación para contenido de servicios de streaming
 
 Acceso esquema proyecto
-<href target=blank>https://bit.ly/ProyectoMLops</href>
+<href target=_blank>https://bit.ly/ProyectoMLops</href>
 
 #### Problemática:
 El ciclo de vida de un proyecto de Machine Learning parte desde el tratamiento de datos denominado ETL 
@@ -60,7 +60,7 @@ Como funcionan las consultas
 En el despliegue (entorno web) se cuenta con 7 bloques donde se ingresaran variables para ser procesadas arrojando un resultado segun el objetivo de cada una de las funciones supra
 
 Mediante la siguiente URL se accede al entorno web
-https://mlops-streaming.onrender.com/docs
+<href target=_blank>https://mlops-streaming.onrender.com/docs<href>
 
 <hr> 
 #### Video explicativo
