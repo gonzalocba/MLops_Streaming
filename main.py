@@ -179,7 +179,7 @@ def get_contents(rating):
     # Devolver el número total de contenidos con el rating de audiencia dado como un entero
     #return {'cantidad': df_rating}
     cantidad = int(len(df_filtered))
-    return {'plataforma': cantidad}   
+    return {'total de contenidos': cantidad}   
     
 #modelo de recomendacion pelicula
 @app.get('/get_recomendation/{titulo}')
